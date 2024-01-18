@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "387723902219",
+    "firebase_url": "https://koiot-7ef13-default-rtdb.firebaseio.com",
+    "project_id": "koiot-7ef13",
+    "storage_bucket": "koiot-7ef13.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:387723902219:android:a797bd8255cced7b56f60e",
+        "android_client_info": {
+          "package_name": "com.example.aplikasikoi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk6r15Sh-HiOADJqviGvlQgY3qyUOvMJ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
