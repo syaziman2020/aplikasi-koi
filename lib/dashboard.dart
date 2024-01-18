@@ -14,7 +14,7 @@ class _DashboardState extends State<Dashboard> {
 
   Future<int> updateKeranAir(int value) async {
     try {
-      DatabaseReference ref = FirebaseDatabase.instance.ref();
+      DatabaseReference ref = FirebaseDatabase.instance.ref("/");
       await ref.update({
         "keranAir": value,
       });
@@ -26,7 +26,7 @@ class _DashboardState extends State<Dashboard> {
 
   Future<int> updatePompaAir(int value) async {
     try {
-      DatabaseReference ref = FirebaseDatabase.instance.ref();
+      DatabaseReference ref = FirebaseDatabase.instance.ref("/");
       await ref.update({
         "pompaAir": value,
       });
@@ -38,7 +38,7 @@ class _DashboardState extends State<Dashboard> {
 
   Future<int> updateLampuUV(int value) async {
     try {
-      DatabaseReference ref = FirebaseDatabase.instance.ref();
+      DatabaseReference ref = FirebaseDatabase.instance.ref("/");
       await ref.update({
         "saklarLampu": value,
       });
@@ -50,7 +50,7 @@ class _DashboardState extends State<Dashboard> {
 
   void readData() {
     try {
-      DatabaseReference starCountRef = FirebaseDatabase.instance.ref('');
+      DatabaseReference starCountRef = FirebaseDatabase.instance.ref("/");
       starCountRef.onValue.listen((DatabaseEvent event) {
         print('Listener is running');
         final data = event.snapshot.value;
@@ -58,11 +58,7 @@ class _DashboardState extends State<Dashboard> {
         setState(() {});
       });
     } catch (e) {
-      setState(() {
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-          content: Text('Terjadi Kesalahan, periksa koneksi internet anda'),
-        ));
-      });
+      rethrow;
     }
   }
 
